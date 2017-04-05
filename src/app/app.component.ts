@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  title = 'Angular 2 Reactive Application!';
+  links = {
+    items: ['/items'],
+    widgets: ['/widgets'],
+    users: ['/users'],
+    home: ['/home']
+  };
 }

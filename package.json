@@ -4,10 +4,11 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "concurrently \"npm run server\" \"ng serve\" ",
+    "server": "json-server --watch server/api/db.json",
     "build": "ng build",
     "test": "ng test",
-    "lint": "ng lint",
+    "lint": "tslint \"src/**/*.ts\" ",
     "e2e": "ng e2e"
   },
   "private": true,
