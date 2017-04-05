@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Ng2RestAppRoutingModule } from './app-routing.module';
-// import { StoreModule } from '@ngrx/store';
+import { StoreModule } from '@ngrx/store';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -16,6 +16,8 @@ import { UsersListComponent } from './users/users-list/users-list.component';
 import { WidgetsComponent } from './widgets/widgets.component';
 import { WidgetDetailComponent } from './widgets/widget-detail/widget-detail.component';
 import { WidgetsListComponent } from './widgets/widgets-list/widgets-list.component';
+import { HomeService } from './shared/home.service';
+import { ItemsService, items } from './shared';
 
 @NgModule({
   declarations: [
@@ -36,9 +38,10 @@ import { WidgetsListComponent } from './widgets/widgets-list/widgets-list.compon
     FormsModule,
     HttpModule,
     Ng2RestAppRoutingModule,
+    StoreModule.provideStore( { items })
 
   ],
-  providers: [],
+  providers: [ ItemsService, HomeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
