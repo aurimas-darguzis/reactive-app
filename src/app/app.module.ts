@@ -16,8 +16,7 @@ import { UsersListComponent } from './users/users-list/users-list.component';
 import { WidgetsComponent } from './widgets/widgets.component';
 import { WidgetDetailComponent } from './widgets/widget-detail/widget-detail.component';
 import { WidgetsListComponent } from './widgets/widgets-list/widgets-list.component';
-import { HomeService } from './shared/home.service';
-import { ItemsService, items } from './shared';
+import { ItemsService, items, UsersService, users, WidgetsService, widgets, HomeService } from './shared';
 
 @NgModule({
   declarations: [
@@ -38,10 +37,10 @@ import { ItemsService, items } from './shared';
     FormsModule,
     HttpModule,
     Ng2RestAppRoutingModule,
-    StoreModule.provideStore( { items })
+    StoreModule.provideStore( { items, users, widgets })
 
   ],
-  providers: [ ItemsService, HomeService],
+  providers: [ ItemsService, UsersService, WidgetsService, HomeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
