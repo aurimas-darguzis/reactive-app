@@ -1,3 +1,14 @@
-<p>
-  users works!
-</p>
+<div class="mdl-grid items">
+  <div class="mdl-cell mdl-cell--6-col">
+    <app-user-list [user]="users$ | async"
+                   (selected)="selectUser($event)"
+                   (deleted)="deleteUser($event)">
+    </app-user-list>
+  </div>
+  <div class="mdl-cell mdl-cell--6-col">
+    <app-user-detail (saved)="saveUser($event)"
+                     (cancelled)="resetUser($event)"
+                     [user]="selectedUser">
+    </app-user-detail>
+  </div>
+</div>
