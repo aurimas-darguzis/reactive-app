@@ -1,3 +1,15 @@
-<p>
-  widgets works!
-</p>
+<div class="mdl-grid items">
+  <div class="mdl-cell mdl-cell--6-col">
+    <app-widget-list [widgets]="widgets$ | async"
+                     (selected)="selectWidget($event)"
+                     (deleted)="deleteWidget($event)">
+    </app-widget-list>
+  </div>
+  <div class="mdl-cell mdl-cell--6-col">
+    <app-widget-detail (saved)="saveWidget($event)"
+                       (cancelled)="resetWidget($event)"
+                       [widget]="selectedWidget">
+      Select a Widget
+    </app-widget-detail>
+  </div>
+</div>
