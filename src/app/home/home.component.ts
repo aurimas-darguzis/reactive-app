@@ -18,7 +18,4 @@ export class HomeComponent {
 
     this.itemsService.loadItems();
    }
-
-
-
 }
