@@ -18,6 +18,8 @@ import { WidgetDetailComponent } from './widgets/widget-detail/widget-detail.com
 import { WidgetsListComponent } from './widgets/widgets-list/widgets-list.component';
 import { ItemsService, items, UsersService, users, WidgetsService, widgets, HomeService } from './shared';
 import { RecipesComponent } from './recipes/recipes.component';
+import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
+import { RecipesListComponent } from './recipes/recipes-list/recipes-list.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { RecipesComponent } from './recipes/recipes.component';
     WidgetsComponent,
     WidgetDetailComponent,
     WidgetsListComponent,
-    RecipesComponent
+    RecipesComponent,
+    RecipeDetailComponent,
+    RecipesListComponent
   ],
   imports: [
     BrowserModule,
