@@ -16,7 +16,7 @@ import { UsersListComponent } from './users/users-list/users-list.component';
 import { WidgetsComponent } from './widgets/widgets.component';
 import { WidgetDetailComponent } from './widgets/widget-detail/widget-detail.component';
 import { WidgetsListComponent } from './widgets/widgets-list/widgets-list.component';
-import { ItemsService, items, UsersService, users, WidgetsService, widgets, HomeService } from './shared';
+import { ItemsService, items, UsersService, users, WidgetsService, widgets, RecipesService, recipes, HomeService } from './shared';
 import { RecipesComponent } from './recipes/recipes.component';
 import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
 import { RecipesListComponent } from './recipes/recipes-list/recipes-list.component';
@@ -43,7 +43,7 @@ import { RecipesListComponent } from './recipes/recipes-list/recipes-list.compon
     FormsModule,
     HttpModule,
     Ng2RestAppRoutingModule,
-    StoreModule.provideStore( { items, users, widgets })
+    StoreModule.provideStore( { items, users, widgets, recipes })
 
   ],
   providers: [ ItemsService, UsersService, WidgetsService, HomeService],
