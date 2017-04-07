@@ -1,3 +1,16 @@
-<p>
-  recipes-list works!
-</p>
+<div  *ngFor="let recipe of recipes" (click)="selected.emit(recipe)"
+      class="item-card mdl-card mdl-shadow--2dp">
+
+  <div class="mdl-car__title">
+    <h2 class="mdl-card__title-text">{{ recipe.name }}</h2>
+  </div>
+  <div class="mdl-card__supporting-text">
+    {{ recipe.description }}
+  </div>
+  <div class="mdl-card__menu">
+    <button (click)="deleted.emit(recipe); $event.stopPropagation();"
+            class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+      <i class="material-icons">close</i>
+    </button>
+  </div>
+</div>
