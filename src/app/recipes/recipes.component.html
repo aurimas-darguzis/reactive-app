@@ -1,3 +1,14 @@
-<p>
-  recipes works!
-</p>
+<div class="mdl-grid items">
+  <div class="mdl-cell mdl-cell--6-col">
+    <app-recipe-list [recipes]="recipes$ | async"
+                     (selected)="selectRecipe($event)"
+                     (deleted)="deleteRecipe($event)">
+    </app-recipe-list>
+  </div>
+  <div class="mdl-cell mdl-cell--6-col">
+    <app-recipe-detail (saved)="saveRecipe($event)"
+                       (cancelled)="resetRecipe($event)"
+                       [recipe]="selectedRecipe">
+    </app-recipe-detail>
+  </div>
+</div>
