@@ -17,6 +17,7 @@ import { WidgetsComponent } from './widgets/widgets.component';
 import { WidgetDetailComponent } from './widgets/widget-detail/widget-detail.component';
 import { WidgetsListComponent } from './widgets/widgets-list/widgets-list.component';
 import { ItemsService, items, UsersService, users, WidgetsService, widgets, HomeService } from './shared';
+import { RecipesComponent } from './recipes/recipes.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ItemsService, items, UsersService, users, WidgetsService, widgets, Home
     UsersListComponent,
     WidgetsComponent,
     WidgetDetailComponent,
-    WidgetsListComponent
+    WidgetsListComponent,
+    RecipesComponent
   ],
   imports: [
     BrowserModule,
